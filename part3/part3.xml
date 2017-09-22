@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE stats PUBLIC "Vorobyov" "http://kodaktor.ru/j/dtd_72e3c">
+<stats>
+    <mostSuspiciousIp>
+        <ip addr="077.234.203.101" frequency="12" />
+    </mostSuspiciousIp>
+    <platforms>
+        <desktop>
+            <platform name="Windows" frequency="87" />
+            <platform name="Linux" frequency="8" />
+            <platform name="MacOS" frequency="6" />
+        </desktop>
+        <mobile>
+            <platform name="Android device" frequency="10" />
+            <platform name="iPhone" frequency="5" />
+            <platform name="iPad" frequency="1" />
+        </mobile>
+        <unclassified count="3" />
+    </platforms>    
+    <ips>
+        <ip addr="077.234.203.101" frequency="12" />
+        <ip addr="005.144.096.251" frequency="11" />
+        <ip addr="081.222.086.058" frequency="6" />
+        <ip addr="094.019.018.060" frequency="4" />
+        <ip addr="091.122.189.004" frequency="4" />
+    </ips>
+</stats>
