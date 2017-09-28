@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "users": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "login": { "type": "string" },
+                    "password": { "type": "string" }
+                },
+                "required": ["login", "password"],
+                "additionalProperties": false
+            }
+        }
+    }
+}
