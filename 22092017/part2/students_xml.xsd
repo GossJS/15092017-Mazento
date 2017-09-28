@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:simpleType name="grade">
-    <xs:restriction base="xs:integer">
-        <xs:pattern value="[1-5]" />
-    </xs:restriction>
-</xs:simpleType>
+    <xs:simpleType name="grade">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[1-5]" />
+        </xs:restriction>
+    </xs:simpleType>
 
-<xs:simpleType name="subject">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Мультимедиа" />
-        <xs:enumeration value="Веб-дизайн" />
-        <xs:enumeration value="Графика" />
-        <xs:enumeration value="Логика" />
-    </xs:restriction>
-</xs:simpleType>
+    <xs:simpleType name="subject">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Мультимедиа" />
+            <xs:enumeration value="Веб-дизайн" />
+            <xs:enumeration value="Графика" />
+            <xs:enumeration value="Логика" />
+        </xs:restriction>
+    </xs:simpleType>
 
-<xs:element name="таблица">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="студент" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="отметка"  maxOccurs="unbounded">
-                            <xs:complexType>
-                                <xs:simpleContent>
-                                    <xs:extension base="grade">
-                                        <xs:attribute   name="дисциплина"
-                                                        type="subject"
-                                                        use="required" />
-                                    </xs:extension>
-                                </xs:simpleContent>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                    <xs:attribute   name="имя"
-                                    type="xs:string" 
-                                    use="required" />
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xs:element name="таблица">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="студент" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="отметка"  maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="grade">
+                                            <xs:attribute   name="дисциплина"
+                                                            type="subject"
+                                                            use="required" />
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute   name="имя"
+                                        type="xs:string" 
+                                        use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 </xs:schema>
